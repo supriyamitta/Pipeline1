@@ -1,0 +1,18 @@
+node
+{
+      echo "Entering Jenkins File"
+      
+      stage("1st stage"){
+      
+      echo "This  is the first stage dear"
+      
+      build 'HelloWorld'
+      
+      }
+      
+      stage("2nd stage"){
+      
+      build job: 'Test1', parameters: [string(name: 'Name', value: 'Test2 JOB is the Main one'), extendedChoice(name: 'Choice', value: 'A')] 
+      
+      }
+}
