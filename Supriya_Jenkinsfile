@@ -15,4 +15,9 @@ node
       build job: 'Test1', parameters: [string(name: 'Name', value: 'Test2 JOB is the Main one'), extendedChoice(name: 'Choice', value: 'A')] 
       
       }
+      stage("3rd stage"){
+      
+      echo "third stage"
+      
+      }
 }
